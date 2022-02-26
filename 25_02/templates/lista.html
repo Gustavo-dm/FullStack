@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Users</title>
+</head>
+
+<body>
+    <h1>Lista de Users</h1>
+    <hr>
+    <table border=4>
+        <tr>
+            <td>ID</td>
+            <td>Nome</td>
+            <td>E-mail</td>
+            <td>Senha</td>
+
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user._id }}</td>
+            <td>{{ user.nome }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ '******' }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Voltar</a>
+</body>
